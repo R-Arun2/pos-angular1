@@ -1,0 +1,287 @@
+ 
+
+
+
+    <!-- form card register -->
+   <div class="card-body">
+      <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+        <div class="col-md-4">
+          <label for="inputName">Location *</label>
+          <input class="form-control"  placeholder="location"type="text" formControlName="location" />
+          <!-- error -->
+          <div
+            class="text-danger"
+            *ngIf="submitted && myForm['location'].errors?.['required']"
+          >
+            Location is required.
+          </div>
+        </div>
+
+       
+
+
+        
+
+        
+        
+
+           <!-- 2 -->
+
+           <div class="col-md-4">
+            <label for="inputName">Counter No. *</label>
+            <input class="form-control"  placeholder="counter number"type="text" formControlName="counterNo" />
+            <!-- error -->
+            <div
+              class="text-danger"
+              *ngIf="submitted && myForm['counterNo'].errors?.['required']"
+            >
+              Counter Number is required.
+            </div>
+          </div>
+
+          <!-- 3 -->
+
+          <div class="col-md-4">
+            <label for="inputName">Customer *</label>
+            <input class="form-control" type="text" formControlName="customer" />
+            <!-- error -->
+            <div
+              class="text-danger"
+              *ngIf="submitted && myForm['customer'].errors?.['required']"
+            >
+            Customer Name is required.
+            </div>
+          </div>
+          
+        </div>
+
+          <!-- 4 -->
+
+          <div class="row">
+
+          <div class="col-md-4">
+            <label for="inputName">Invoice Date *</label>
+            <input class="form-control" type="text" formControlName="invoiceDate" />
+            <!-- error -->
+            <div
+              class="text-danger"
+              *ngIf="submitted && myForm['invoiceDate'].errors?.['required']"
+            >
+            Invoice Date is required.
+            </div>
+          </div>
+
+          <!-- 5 -->
+
+          <div class="col-md-4">
+            <label for="inputName">Invoice No *</label>
+            <input class="form-control" type="text" formControlName="invoiceNo" />
+            <!-- error -->
+            <div
+              class="text-danger"
+              *ngIf="submitted && myForm['invoiceNo'].errors?.['required']"
+            >
+            Invoice Number  is required.
+            </div>
+          </div>
+
+            <!-- 6 -->
+
+            <div class="col-md-4">
+              <label for="inputName">Currency *</label>
+              <input class="form-control" type="text" formControlName="currency" />
+              <!-- error -->
+              <div
+                class="text-danger"
+                *ngIf="submitted && myForm['currency'].errors?.['required']"
+              >
+                Currency is required.
+              </div>
+            </div>
+
+            </div>
+
+
+            <!-- 7 -->
+            <div class="row">
+
+
+            <div class="col-md-4">
+              <label for="inputName">Sales Ex Rate *</label>
+              <input class="form-control" type="text" formControlName="salesExRate" />
+              <!-- error -->
+              <div
+                class="text-danger"
+                *ngIf="submitted && myForm['salesExRate'].errors?.['required']"
+              >
+              Sales Ex Rate  is required.
+              </div>
+            </div>
+
+
+            <!-- 8 -->
+
+
+            <div class="col-md-4">
+              <label for="inputName">Local Ex Rate *</label>
+              <input class="form-control" type="text" formControlName="localExRate" />
+              <!-- error -->
+              <div
+                class="text-danger"
+                *ngIf="submitted && myForm['localExRate'].errors?.['required']"
+              >
+              Local Ex Rate is required.
+              </div>
+            </div>
+
+
+            <!-- 9 -->
+
+            <div class="col-md-4">
+              <label for="inputName">Place of Delivery *</label>
+              <input class="form-control" type="text" formControlName="placeOfDelivery" />
+              <!-- error -->
+              <div
+                class="text-danger"
+                *ngIf="submitted && myForm['placeOfDelivery'].errors?.['required']"
+              >
+              Place Of Delivery is required.
+              </div>
+            </div>
+          </div>
+
+
+
+            <!-- 10 -->
+
+            <div class="row">
+            <div class="col-md-4">
+              <label for="inputName">Customer / Remarks</label>
+              <input class="form-control" type="text" formControlName="customerRemarks" />
+              <!-- error -->
+              <!-- <div
+                class="text-danger"
+                *ngIf="submitted && myForm['customerRemarks'].errors?.['required']"
+              >
+              Customer Remarks is required.
+              </div> -->
+            </div>
+
+            <!-- 11 -->
+
+
+            <div class="col-md-4">
+              <label for="inputName">Marketing Person</label>
+              <input class="form-control" type="text" formControlName="marketingPerson" />
+              <!-- error -->
+              <!-- <div
+                class="text-danger"
+                *ngIf="submitted && myForm['marketingPerson'].errors?.['required']"
+              >
+              Marketing Person is required.
+              </div> -->
+            </div>
+
+            <!-- 12 -->
+
+
+            <div class="col-md-4">
+              <label for="inputName">Local Currency</label>
+              <input class="form-control" type="text" formControlName="localCurrency" />
+              <!-- error -->
+              <!-- <div
+                class="text-danger"
+                *ngIf="submitted && myForm['localCurrency'].errors?.['required']"
+              >
+              Local Currency is required.
+              </div> -->
+            </div>
+          </div>
+
+            <!-- end -->
+ 
+         
+
+
+        <!-- <div class="mb-3">
+          <label for="inputEmail3">Email</label>
+          <input class="form-control" type="text" formControlName="email" />
+        
+          <div
+            class="text-danger"
+            *ngIf="submitted && myForm['email'].errors?.['required']"
+          >
+            Enter your email.
+          </div>
+          <div
+            class="text-danger"
+            *ngIf="submitted && myForm['email'].errors?.['pattern']"
+          >
+            Enter valid email.
+          </div>
+        </div> -->
+
+        <!-- <div class="mb-3">
+          <label for="inputPassword3">Designation</label>
+          <select
+            class="custom-select form-control"
+            (change)="updateProfile($event.target.value)"
+            formControlName="designation"
+          >
+            <option value="">Choose...</option>
+            <option
+              *ngFor="let employeeProfile of EmployeeProfile"
+              value="{{ employeeProfile }}"
+            >
+              {{ employeeProfile }}
+            </option>
+          </select>
+          
+          <div
+            class="text-danger"
+            *ngIf="submitted && myForm['designation'].errors?.['required']"
+          >
+            Choose designation.
+          </div>
+        </div> -->
+
+        <!-- <div class="mb-3">
+          <label for="inputVerify3">Mobile No</label>
+          <input
+            class="form-control"
+            type="text"
+            formControlName="phoneNumber"
+          />
+        
+          <div
+            class="text-danger"
+            *ngIf="submitted && myForm['phoneNumber'].errors?.['required']"
+          >
+            Enter your phone number.
+          </div>
+          <div
+            class="text-danger"
+            *ngIf="submitted && myForm['phoneNumber'].errors?.['pattern']"
+          >
+            Enter Numbers Only
+          </div>
+        </div> -->
+
+
+      
+
+        <br>
+        <div class="d-grid">
+          <button class="btn btn-primary btn-block" type="submit">
+            Register
+          </button>
+        </div>
+      </form>
+
+
+   
+    </div>
+  
+  <!-- form card register -->
+
